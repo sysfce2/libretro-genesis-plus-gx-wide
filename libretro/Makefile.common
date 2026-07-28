@@ -74,6 +74,8 @@ SOURCES_C += \
 				 $(LIBRETRO_COMM_DIR)/cdrom/cdrom.c \
 				 $(LIBRETRO_COMM_DIR)/vfs/vfs_implementation_cdrom.c
 endif
+endif
+
 SOURCES_C += \
              $(LIBRETRO_DEPS_DIR)/zlib-1.2.11/adler32.c \
              $(LIBRETRO_DEPS_DIR)/zlib-1.2.11/crc32.c \
@@ -81,8 +83,6 @@ SOURCES_C += \
              $(LIBRETRO_DEPS_DIR)/zlib-1.2.11/inflate.c \
              $(LIBRETRO_DEPS_DIR)/zlib-1.2.11/inftrees.c \
              $(LIBRETRO_DEPS_DIR)/zlib-1.2.11/zutil.c
-
-endif
 
 SOURCES_C += $(foreach dir,$(TREMOR_SRC_DIR),$(wildcard $(dir)/*.c))
 
